@@ -1,0 +1,13 @@
+package inno_lab;
+
+public class person {
+	String name;
+	int age;
+	public void introduce() {
+		 System.out.println("Welcome to all");
+	}
+    public static void main(String[]args) {
+    	person p1=new person();
+    	p1.introduce();
+    }
+}
