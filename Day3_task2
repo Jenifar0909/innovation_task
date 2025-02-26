@@ -1,0 +1,27 @@
+package inno_lab;
+
+public class book {
+	String title;
+	String author;
+	
+	public book() {
+		this.title="cpp programming";
+		this.author="bala guru samy";
+		
+	}
+	public book(String title,String author) {
+		title=title;
+		author=author;
+	}
+	public void display() {
+		System.out.println("title:"+title);
+		System.out.println("author:"+author);
+	}
+    public static void main(String[]args) {
+    	book b1=new book();
+    	b1.display();
+    	book b2=new book("RETRIVED REFORMATION","O HENRY");
+    	b2.display();
+    	
+    }
+}
