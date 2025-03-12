@@ -1,0 +1,62 @@
+public class Computer {
+
+  
+    class Processor {
+        private String brand;
+
+        public Processor(String brand) {
+            this.brand = brand;
+        }
+
+        public void displayProcessorInfo() {
+            System.out.println("Processor brand: " + brand);
+        }
+    }
+
+    
+    public void showProcessorDetails() {
+        class LocalProcessor {
+            private String model;
+
+            public LocalProcessor(String model) {
+                this.model = model;
+            }
+
+            public void display() {
+                System.out.println("Local Processor Model: " + model);
+            }
+        }
+
+        
+        LocalProcessor localProcessor = new LocalProcessor("Intel i9");
+        localProcessor.display();
+    }
+
+    
+    public void startTask() {
+        Runnable task = new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("Task is running in an anonymous inner class.");
+            }
+        };
+
+        
+        Thread thread = new Thread(task);
+        thread.start();
+    }
+
+    public static void main(String[] args) {
+        Computer computer = new Computer();
+
+       
+        Computer.Processor processor = computer.new Processor("Intel Core i7");
+        processor.displayProcessorInfo();
+
+        
+        computer.showProcessorDetails();
+
+        
+        computer.startTask();
+    }
+}
